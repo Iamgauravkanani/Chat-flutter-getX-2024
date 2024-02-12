@@ -1,5 +1,4 @@
 import 'package:chat_app_11/modules/screens/login/model/login_model.dart';
-import 'package:chat_app_11/modules/screens/login/views/login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 class AuthHelper {

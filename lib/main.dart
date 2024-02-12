@@ -1,3 +1,4 @@
+import 'package:chat_app_11/modules/screens/home/views/home.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,10 +11,13 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(GetMaterialApp(
-    debugShowCheckedModeBanner: false,
-    getPages: [
-      GetPage(name: '/', page: () => Login()),
-    ],
-  ));
+  runApp(
+    GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      getPages: [
+        GetPage(name: '/', page: () => Login()),
+        GetPage(name: '/home', page: () => const Home()),
+      ],
+    ),
+  );
 }

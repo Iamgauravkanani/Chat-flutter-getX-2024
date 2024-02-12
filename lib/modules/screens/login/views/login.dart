@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names, duplicate_ignore
+
 import 'dart:developer';
 import 'package:chat_app_11/modules/screens/login/controllers/login_controller.dart';
 import 'package:chat_app_11/modules/screens/login/model/login_model.dart';
@@ -8,12 +10,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'components/components.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 
 // ignore: must_be_immutable
 class Login extends StatelessWidget {
   Login({super.key});
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
+  // ignore: non_constant_identifier_names
   TextEditingController s_emailController = TextEditingController();
   TextEditingController s_passwordController = TextEditingController();
   String? email;
@@ -113,8 +117,10 @@ class Login extends StatelessWidget {
         await AuthHelper.authHelper.signIn(loginCredentials: loginCredentials);
     if (res['error'] != null) {
       log("login failed");
+      Fluttertoast.showToast(msg: "Login Failed");
     } else {
-      log("login sucess");
+      Fluttertoast.showToast(msg: "Login Success");
+      Get.offAndToNamed('/home');
     }
   }
 

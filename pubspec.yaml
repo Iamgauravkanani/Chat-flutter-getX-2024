@@ -39,6 +39,7 @@ dependencies:
   firebase_core:
   firebase_auth:
   google_fonts:
+  fluttertoast: ^8.2.4
 
 dev_dependencies:
   flutter_test:

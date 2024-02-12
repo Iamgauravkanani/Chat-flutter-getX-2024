@@ -1,6 +1,4 @@
 import 'dart:developer';
-import 'package:chat_app_11/modules/screens/login/model/login_model.dart';
-import 'package:chat_app_11/modules/utils/constants/variables.dart';
 import 'package:flutter/material.dart';
 import '../../../../utils/helpers/auth_helper.dart';
 
